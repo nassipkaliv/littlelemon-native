@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Little Lemon wireframe</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, Helvetica, Arial, sans-serif; background: #f4f4f2; color: #333; width: 1736px; padding: 48px 56px; }
+  h1 { font-size: 40px; margin-bottom: 6px; }
+  .sub { font-size: 18px; color: #666; margin-bottom: 36px; }
+  .row { display: flex; gap: 40px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .label { font-size: 20px; font-weight: 700; }
+  .phone { width: 360px; height: 760px; background: #fff; border: 3px solid #333; border-radius: 34px; overflow: hidden; display: flex; flex-direction: column; position: relative; }
+  .notch { height: 26px; }
+  .bar { height: 56px; border-bottom: 2px solid #ddd; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; }
+  .box { background: #d9d9d9; border: 2px solid #999; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #555; text-align: center; }
+  .logo { width: 150px; height: 28px; }
+  .circle { width: 36px; height: 36px; border-radius: 50%; }
+  .back { white-space: nowrap; font-size: 16px; font-weight: 600; width: 60px; }
+  .ghost { width: 36px; }
+  .dark { background: #8a8a8a; border-color: #666; color: #fff; }
+  .line { height: 12px; background: #c4c4c4; border-radius: 3px; margin: 6px 0; }
+  .input { height: 42px; border: 2px solid #999; border-radius: 6px; background: #fff; font-size: 12px; color: #888; display: flex; align-items: center; padding: 0 10px; }
+  .btn { height: 44px; border-radius: 8px; border: 2px solid #666; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+  .btn.fill { background: #bdbdbd; }
+  .chip { height: 32px; padding: 0 14px; border-radius: 16px; background: #d9d9d9; border: 2px solid #999; display: inline-flex; align-items: center; font-size: 12px; font-weight: 700; }
+  .section { position: relative; }
+  .tag { position: absolute; right: 6px; top: 6px; background: #333; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 4px; z-index: 2; }
+  .guide { width: 420px; background: #fff; border-radius: 16px; border: 2px solid #ddd; padding: 28px; font-size: 16px; line-height: 1.5; }
+  .guide h2 { font-size: 22px; margin: 18px 0 8px; }
+  .guide h2:first-child { margin-top: 0; }
+  .guide ol { padding-left: 22px; }
+  .num { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: #333; color: #fff; font-size: 12px; font-weight: 700; align-items: center; justify-content: center; margin-right: 6px; }
+  .check { display: flex; gap: 10px; align-items: center; font-size: 13px; margin: 8px 0; }
+  .cb { width: 18px; height: 18px; border: 2px solid #666; border-radius: 3px; }
+  .dots { display: flex; justify-content: center; gap: 6px; margin-bottom: 12px; }
+  .dot { width: 10px; height: 10px; border-radius: 5px; background: #ccc; }
+  .dot.on { width: 24px; background: #666; }
+</style>
+</head>
+<body>
+  <h1>Little Lemon — mobile app wireframe</h1>
+  <div class="sub">Low-fidelity wireframes for the three screens of the React Native capstone: Onboarding (3 steps), Home and Profile. Stack navigation: Onboarding → Home → Profile (back button returns to Home).</div>
+
+  <div class="row">
+    <!-- ONBOARDING -->
+    <div class="col">
+      <div class="label">1. Onboarding (step 1 of 3)</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="bar"><span class="ghost"></span><div class="box logo">LOGO</div><span class="ghost"></span></div>
+        <div class="box dark" style="height:90px;border-width:0;font-size:20px;">Let us get to know you</div>
+        <div style="padding:22px;flex:1;">
+          <div style="font-size:12px;font-weight:700;color:#666;margin-bottom:8px;">STEP 1 OF 3</div>
+          <div class="line" style="width:90%;height:18px;"></div>
+          <div class="line" style="width:55%;height:18px;margin-bottom:26px;"></div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:6px;">First name *</div>
+          <div class="input">Tilly</div>
+          <div style="font-size:11px;color:#888;margin-top:10px;">Step 2: Last name · Step 3: Email</div>
+        </div>
+        <div style="background:#eee;padding:20px;">
+          <div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
+          <div style="display:flex;gap:12px;"><div class="btn" style="flex:1;border-style:dashed;color:#999;">Back</div><div class="btn fill" style="flex:1;">Next</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME -->
+    <div class="col">
+      <div class="label">2. Home</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="bar section"><span class="ghost"></span><div class="box logo">LOGO</div><div class="box circle">IMG</div>
+          <span class="tag" style="top:-22px;right:120px;">① HEADER</span></div>
+        <div class="section" style="background:#8a8a8a;padding:14px;">
+          <span class="tag">② HERO</span>
+          <div class="line" style="width:55%;height:26px;background:#d9d9d9;"></div>
+          <div style="display:flex;gap:10px;margin-top:6px;">
+            <div style="flex:1;">
+              <div class="line" style="width:45%;height:16px;background:#e6e6e6;"></div>
+              <div class="line" style="background:#e6e6e6;"></div><div class="line" style="background:#e6e6e6;"></div>
+              <div class="line" style="background:#e6e6e6;"></div><div class="line" style="width:70%;background:#e6e6e6;"></div>
+            </div>
+            <div class="box" style="width:110px;height:120px;border-radius:10px;">HERO IMAGE</div>
+          </div>
+          <div class="input" style="margin-top:12px;border-color:#666;">⌕ Search dishes</div>
+        </div>
+        <div class="section" style="padding:14px;border-bottom:2px solid #ddd;">
+          <span class="tag">③ MENU BREAKDOWN</span>
+          <div style="font-size:14px;font-weight:800;margin-bottom:10px;">ORDER FOR DELIVERY!</div>
+          <div style="display:flex;gap:8px;"><span class="chip" style="background:#777;color:#fff;">Starters</span><span class="chip">Mains</span><span class="chip">Desserts</span><span class="chip">Drinks</span></div>
+        </div>
+        <div class="section" style="padding:0 14px;flex:1;">
+          <span class="tag">④ FOOD MENU LIST</span>
+          <div style="display:flex;gap:10px;padding:14px 0;border-bottom:2px solid #eee;"><div style="flex:1;"><div class="line" style="width:50%;height:14px;"></div><div class="line"></div><div class="line" style="width:80%;"></div><div class="line" style="width:25%;"></div></div><div class="box" style="width:76px;height:76px;">IMG</div></div>
+          <div style="display:flex;gap:10px;padding:14px 0;border-bottom:2px solid #eee;"><div style="flex:1;"><div class="line" style="width:40%;height:14px;"></div><div class="line"></div><div class="line" style="width:70%;"></div><div class="line" style="width:25%;"></div></div><div class="box" style="width:76px;height:76px;">IMG</div></div>
+          <div style="display:flex;gap:10px;padding:14px 0;"><div style="flex:1;"><div class="line" style="width:55%;height:14px;"></div><div class="line"></div><div class="line" style="width:60%;"></div></div><div class="box" style="width:76px;height:76px;">IMG</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="col">
+      <div class="label">3. Profile</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="bar"><span class="back">‹ Back</span><div class="box logo">LOGO</div><span class="ghost"></span></div>
+        <div style="padding:18px;flex:1;">
+          <div style="font-size:16px;font-weight:800;margin-bottom:10px;">Personal information</div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;">
+            <div class="box" style="width:64px;height:64px;border-radius:50%;">AVATAR</div>
+            <div class="btn fill" style="padding:0 14px;height:38px;">Change</div><div class="btn" style="padding:0 14px;height:38px;">Remove</div>
+          </div>
+          <div style="font-size:11px;font-weight:700;margin:6px 0 4px;">First name</div><div class="input" style="height:36px;">Tilly</div>
+          <div style="font-size:11px;font-weight:700;margin:6px 0 4px;">Last name</div><div class="input" style="height:36px;">Doe</div>
+          <div style="font-size:11px;font-weight:700;margin:6px 0 4px;">Email</div><div class="input" style="height:36px;">tilly@example.com</div>
+          <div style="font-size:11px;font-weight:700;margin:6px 0 4px;">Phone number</div><div class="input" style="height:36px;">(217) 555-0113</div>
+          <div style="font-size:16px;font-weight:800;margin:14px 0 4px;">Email notifications</div>
+          <div class="check"><div class="cb"></div>Order statuses</div>
+          <div class="check"><div class="cb"></div>Password changes</div>
+          <div class="check"><div class="cb"></div>Special offers</div>
+          <div class="check"><div class="cb"></div>Newsletter</div>
+          <div class="btn fill" style="margin-top:12px;">Log out</div>
+          <div style="display:flex;gap:10px;margin-top:10px;"><div class="btn" style="flex:1;font-size:12px;">Discard changes</div><div class="btn fill" style="flex:1;font-size:12px;">Save changes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEXT GUIDE -->
+    <div class="guide">
+      <h2>Home screen structure</h2>
+      <p><span class="num">1</span><b>Header</b> — Little Lemon logo centred, profile avatar on the right (opens Profile).</p>
+      <p style="margin-top:8px;"><span class="num">2</span><b>Hero</b> — restaurant name, location (Chicago), short description, hero image and a search bar that filters dishes by name.</p>
+      <p style="margin-top:8px;"><span class="num">3</span><b>Menu breakdown</b> — “Order for delivery!” and a horizontal bar of category buttons (Starters, Mains, Desserts, Drinks). Selected buttons are highlighted; several can be active.</p>
+      <p style="margin-top:8px;"><span class="num">4</span><b>Food menu list</b> — each item shows name, two-line description, price and a thumbnail.</p>
+      <h2>Onboarding</h2>
+      <p>Shown on first launch only. Three pages (first name → last name → email), each with validation and a <b>Next</b> button; the last page finishes and opens Home.</p>
+      <h2>Profile</h2>
+      <p>Pre-filled with the onboarding data. Avatar, phone and notification preferences can be edited. <b>Save changes</b> persists data across restarts; <b>Log out</b> clears all stored data and returns to Onboarding.</p>
+      <h2>Navigation</h2>
+      <p>Native stack navigator — Profile has a Back button to Home.</p>
+    </div>
+  </div>
+</body>
+</html>
